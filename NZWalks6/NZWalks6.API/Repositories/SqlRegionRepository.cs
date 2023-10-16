@@ -30,7 +30,7 @@ namespace NZWalks6.API.Repositories
 
         public async Task<Region?> Get(Guid id)
         {
-            var region = await dbContext.Regions.FindAsync(id);
+            var region = await dbContext.Regions.FirstOrDefaultAsync(x=>x.Id==id);
 
             if (region == null)
                 return null;

@@ -10,8 +10,9 @@ namespace NZWalks6.API.Profiles
         {
             CreateMap<Models.Domains.Region, Models.DTO.RegionsDtos>()
                 .ReverseMap();
-            CreateMap<Models.Domains.Region, RegionAddDto>()
+            CreateMap<Models.Domains.Region, Models.DTO.RegionAddDto>()
                 .ReverseMap();
+           
             /*ForMember(dest => dest.Id, options => options.MapFrom(src => src.Id))*/
         }
     }
