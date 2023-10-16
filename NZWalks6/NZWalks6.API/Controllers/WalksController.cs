@@ -72,7 +72,10 @@ namespace NZWalks6.API.Controllers
 
             return Ok(mapper.Map<WalkDifficultyDto>(walkDiffDomain));
         }
+        #region privateMethods
 
+       
+        #endregion
 
     }
 }
