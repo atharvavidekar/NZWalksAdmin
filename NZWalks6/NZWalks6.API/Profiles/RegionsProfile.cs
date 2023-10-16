@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using NZWalks6.API.Models.DTO;
 
 namespace NZWalks6.API.Profiles
 {
@@ -9,7 +10,9 @@ namespace NZWalks6.API.Profiles
         {
             CreateMap<Models.Domains.Region, Models.DTO.RegionsDtos>()
                 .ReverseMap();
-                /*ForMember(dest => dest.Id, options => options.MapFrom(src => src.Id))*/
+            CreateMap<Models.Domains.Region, RegionAddDto>()
+                .ReverseMap();
+            /*ForMember(dest => dest.Id, options => options.MapFrom(src => src.Id))*/
         }
     }
 }

@@ -7,5 +7,14 @@ namespace NZWalks6.API.Repositories
     {
 
         Task<IEnumerable<Region>> GetAllAsync();
+
+        Task<Region?> Get(Guid id);
+
+        Task<Region> Post(Region region);
+
+        Task<Region?> Delete(Guid id);
+
+        Task<Region?> Put(Region region,Guid id);
+
     }
 }
