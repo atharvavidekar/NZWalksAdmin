@@ -66,14 +66,11 @@ namespace NZWalks6.API.Controllers
         public async Task<IActionResult> UpdateAsync([FromBody] WalkUpdateDto walk, [FromRoute] Guid id)
         {
 
-            var walkVar = mapper.Map<Walk>(walk);
-
-            walkVar = await walkRepository.UpdateAsync(id,walkVar);
-
-            if(walkVar==null)
+            var walkDiffDomain = mapper.Map<WalkDifficultyDto>(walk);
+            if(walkDiffDomain==null)
                 return NotFound();
 
-            return Ok(mapper.Map<WalkDto>(walkVar));
+            return Ok(mapper.Map<WalkDifficultyDto>(walkDiffDomain));
         }
 
 
